@@ -1,4 +1,10 @@
 #submittbtn {
-    width: 30px;
+    width: 100px;
     height: 50px;
+    align-items: center;
+}
+#submittbtn2 {
+    width: 100px;
+    height: 50px;
+    align-items: center;
 }

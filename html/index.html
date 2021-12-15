@@ -11,19 +11,22 @@
 </head>
 <body>
 
-<h1>Example of Range Slider Using Javascript</h1>
-<p>Use the slider to increment or decrement value.</p>
+<h1>Caesar Verschlüsselung</h1>
+<p>Mit dem Schiebregler kann die Verschiebung der Buchstaben angepasst werden.</p>
+<p>Bitte nur Buchstaben von [A-Z] eingeben, keine Umlaute oder Sonderzeichen.</p>
 
 <div class="rangeslider">
     <input type="range" min="0" max="26" value="10" step="1"
            class="myslider" id="sliderRange">
-    <p>Value: <span id="demo"></span></p>
+    <p>Verschiebung: <span id="demo"></span></p>
 </div>
 
 <div>
     <textarea id="textArea"></textarea>
 </div>
 
-<input type="button" id= "submittbtn" width="30px" height="20px" value="Verschlüsseln" onclick="encryptText()">
+<input type="button" id= "submittbtn" width="180px" height="20px" value="Verschlüsseln" onclick="encryptText()">
+<input type="button" id= "submittbtn2" width="180px" height="20px" value="Entschlüsseln" onclick="decryptText()">
+<p>Text: <span class="text_message" id="text_message"></span></p>
 </body>
 </html>
