@@ -1,5 +1,9 @@
 let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let range_letter = 3;
+let numSaved = 1;
+let encrypted = true;
+let decrypted = false;
+
 window.onload = function() {
     let rangeslider = document.getElementById("sliderRange");
     let output = document.getElementById("demo");
@@ -33,6 +37,9 @@ function encryptText() {
     }
     console.log(message_encrypted_list.join(""));
     message_encrypted.innerHTML += message_encrypted_list.join("");
+    return message_encrypted_list.join("");
+    encrypted = true;
+    decrypted = false;
 }
 
 function decryptText() {
@@ -55,6 +62,19 @@ function decryptText() {
             }
         }
     }
-    console.log(message_decrypted_list.join(""));
+    console.log(message_decrypted_list.join(""));;
+    decrypted = true;
+    encrypted = false;
     message_decrypted.innerHTML += message_decrypted_list.join("");
+    return message_decrypted_list.join("");
+}
+
+
+
+function saveText() {
+    numSaved++;
+    let savedText = document.createElement("p");
+    savedText.innerHTML = `Text ${(numSaved - 1)} : ${(encrypted) ? encryptText(): decryptText()}`;
+    document.body.appendChild(savedText);
+
 }
