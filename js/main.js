@@ -37,9 +37,10 @@ function encryptText() {
     }
     console.log(message_encrypted_list.join(""));
     message_encrypted.innerHTML += message_encrypted_list.join("");
-    return message_encrypted_list.join("");
     encrypted = true;
     decrypted = false;
+    return message_encrypted_list.join("");
+
 }
 
 function decryptText() {
@@ -73,7 +74,10 @@ function decryptText() {
 
 function saveText() {
     numSaved++;
+    let multiplier = numSaved * 3;
     let savedText = document.createElement("p");
+    savedText.style.cssText = `position: absolute;top: ${65 + multiplier}%;left: 47%;text-align: center;`;
+    savedText.classList.add("savedText");
     savedText.innerHTML = `Text ${(numSaved - 1)} : ${(encrypted) ? encryptText(): decryptText()}`;
     document.body.appendChild(savedText);
 

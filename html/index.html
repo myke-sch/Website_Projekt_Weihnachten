@@ -8,26 +8,37 @@
     <title>Document</title>
     <script src="../js/main.js"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 <body>
-
+<div class="container" id="rootElement">
 <h1>Caesar Verschlüsselung</h1>
 <p>Mit dem Schiebregler kann die Verschiebung der Buchstaben angepasst werden.</p>
 <p>Bitte nur Buchstaben von [A-Z] eingeben, keine Umlaute oder Sonderzeichen.</p>
 
-<div class="rangeslider">
-    <input type="range" min="0" max="26" value="10" step="1"
+<div class="rangeslider" style="width:300px" id="slider1">
+    <input class="mdl-slider mdl-js-slider" type="range" min="0" max="26" value="10" step="1"
            class="myslider" id="sliderRange">
     <p>Verschiebung: <span id="demo"></span></p>
 </div>
 
-<div>
-    <textarea id="textArea"></textarea>
-</div>
 
-<input type="button" id= "submittbtn" width="180px" height="20px" value="Verschlüsseln" onclick="encryptText()">
-<input type="button" id= "submittbtn2" width="180px" height="20px" value="Entschlüsseln" onclick="decryptText()">
-<input type="button" id= "submittbtn3" width="180px" height="20px" value=" Ausgabe Speichern" onclick="saveText()">
+<form action="#">
+<div class="mdl-textfield mdl-js-textfield">
+    <textarea  id="textArea" class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+</div>
+</form>
+
+
+<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id= "submittbtn" width="200px" value="Verschlüsseln" onclick="encryptText()">
+</button>
+<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id= "submittbtn2" width="200px" value="Entschlüsseln" onclick="decryptText()">
+<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id= "submittbtn3" width="200px" value=" Ausgabe Speichern" onclick="saveText()">
 <p>Text: <span class="text_message" id="text_message"></span></p>
+
+</div>
 </body>
 </html>
