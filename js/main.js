@@ -70,7 +70,7 @@ function decryptText() {
     return message_decrypted_list.join("");
 }
 
-
+//Speichern
 
 function saveText() {
     numSaved++;
