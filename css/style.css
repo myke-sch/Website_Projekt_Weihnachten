@@ -2,11 +2,13 @@
     width: 140px;
     height: 50px;
     align-items: center;
+    text-align: center;
 }
 #submittbtn2 {
     width: 140px;
     height: 50px;
     align-items: center;
+    text-align: center;
 }
 
 .myslider {
@@ -17,7 +19,6 @@
     position: absolute;
     top: 15%;
     left: 33%;
-    text-align: center;
 }
 
 #savedText {
