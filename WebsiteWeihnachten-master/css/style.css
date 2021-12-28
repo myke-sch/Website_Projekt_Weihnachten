@@ -1,0 +1,47 @@
+#submittbtn {
+    width: 150px;
+    height: 50px;
+    align-items: center;
+	text-align: center;
+}
+#submittbtn2 {
+    width: 150px;
+    height: 50px;
+    align-items: center
+	text-align: center;
+}
+
+.myslider {
+    width: 100px;
+}
+
+.container {
+    position: absolute;
+    top: 15%;
+    left: 33%;
+    text-align: center;
+}
+
+#savedText {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 70px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+#slider1 {
+    position: relative;
+    top: 45%;
+    left: 20%;
+    text-align: center;
+    padding: 25px;
+}
+
+
